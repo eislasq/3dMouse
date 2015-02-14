@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TouchPad</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Connect</string>
+
+    <string name="txt_checkbox">Te gusta android</string>
+    <string name="txt_radio_1">Opcion 1</string>
+    <string name="txt_radio_2">Opcion 2</string>
+    <string name="txt_radio_3">Opcion 3</string>
+
+</resources>
