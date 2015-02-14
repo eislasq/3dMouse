@@ -1,7 +1,6 @@
-package com.example.eislas.touchpad;
+package com.IslasCruz;
 
 import android.content.Context;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;

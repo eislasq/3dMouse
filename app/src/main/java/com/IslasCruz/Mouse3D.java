@@ -1,4 +1,4 @@
-package com.example.eislas.touchpad;
+package com.IslasCruz;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -13,10 +13,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.IslasCruz.R;
+
 import java.util.Locale;
 
 
-public class TouchActivity extends ActionBarActivity implements SensorEventListener {
+public class Mouse3D extends ActionBarActivity implements SensorEventListener {
 
     SensorManager mSensorManager;
     Sensor acelerometer;
@@ -27,7 +29,7 @@ public class TouchActivity extends ActionBarActivity implements SensorEventListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_touch);
+        setContentView(R.layout.activity_mouse3d);
         setInputControls();
 
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
