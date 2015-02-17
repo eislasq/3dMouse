@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.IslasCruz.R;
@@ -39,14 +41,22 @@ public class Mouse3D extends ActionBarActivity implements SensorEventListener {
 
     public void setInputControls() {
 
-        socketClient = new SocketClient(getApplicationContext());
+
 
         Button bStartClient = (Button) findViewById(R.id.bStartClient);
+
         bStartClient.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 try {
+
+
+                    EditText tServer = (EditText) findViewById(R.id.testServer);
+
+                    Toast.makeText(getApplicationContext(), tServer.getText().toString(), Toast.LENGTH_LONG).show();
+
+                    socketClient = new SocketClient(tServer.getText().toString());
                     new Thread(socketClient.runable).start();
                 } catch (Exception e) {
                     Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();

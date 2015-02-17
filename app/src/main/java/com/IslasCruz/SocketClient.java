@@ -16,21 +16,23 @@ import java.net.UnknownHostException;
 public class SocketClient {
     Runnable runable;
     public static String message = "Wait";
-    Context applicationContext;
 
 
-    public SocketClient(Context appContext) {
-        applicationContext = appContext;
+    public SocketClient(String server) {
 
-        Toast.makeText(applicationContext, "Creando el runable ", Toast.LENGTH_SHORT).show();
-        System.err.println("Creando el runable");
+        String[] serverCachos=new String[2];
+        serverCachos=server.split(":");
+        final String serverIp=serverCachos[0];
+        final int serverPort=Integer.parseInt(serverCachos[1]);
+
+        System.err.println("Creando el runable "+serverIp+":"+serverPort);
 
         runable = new Runnable() {
 
             @Override
             public void run() {
-                String serverName = "192.168.15.4";
-                int port = 8000;
+                String serverName = serverIp;
+                int port = serverPort;
                 Socket echoSocket = null;
                 PrintWriter out = null;
                 BufferedReader in = null;
